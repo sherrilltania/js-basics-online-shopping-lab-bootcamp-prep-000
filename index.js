@@ -38,6 +38,15 @@ return cart
  }
    return newCart;
 }
+/* The total() function accepts no arguments, iterates through the cart array, 
+and returns the current total value of the items in the cart.*/
+function total(){
+  var totalValue = 0;
+  for( var i = 0; i < cart.length; i ++){
+    totalValue = totalValue + cart[i].price;
+  }
+  return totalValue;
+}
 
  function removeFromCart(item){
    for(var i = 0, l = cart.length; i < l; i++){
