@@ -87,13 +87,12 @@ If a card number is received, the function should
 empty the cart array
 return Your total cost is $71, which will be charged to the card 83296759. (where 71 is the value returned by total() and 83296759 is the credit card number passed to placeOrder())*/
 
- function placeOrder(cardNumber) {
- if (cardNumber === undefined){
-  console.log("Sorry, we don't have a credit card on file for you.")
-}
-else{
-   console.log("Your total cost is $${total()}, which will be charged to the card ${cardNumber}.")
-  cart = [];
-  return cart;
-}
+function placeOrder(cardNumber) {
+ if(arguments.length===0){
+   console.log("Sorry , we don't have a credit card on file for you.");
  }
+ else if(arguments.length ==1){
+   console.log(`Your total cost is $${total()}, which will be charged to the card ${cardNumber}`);
+   cart = [];
+ }
+}
