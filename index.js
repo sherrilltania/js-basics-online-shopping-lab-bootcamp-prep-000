@@ -25,7 +25,7 @@ return cart
      if(cart.length === 1){
      console.log("In your cart, you have " + newCart + ".")
    }
-   
+
    else if(cart.length === 2){
      console.log("In your cart, you have" + newCart.join("and ") + ".")
    }
