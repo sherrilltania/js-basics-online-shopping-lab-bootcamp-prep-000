@@ -7,7 +7,7 @@ function getCart() {
 function setCart(c) {
   cart = c;
   return cart;
-} 
+}
 
 function addToCart(item){
       var newObject= {};
