@@ -1,13 +1,13 @@
 var cart = [];
 
-/*function getCart() {
+function getCart() {
  return cart;
 }
 
 function setCart(c) {
   cart = c;
   return cart;
-} */
+} 
 
 function addToCart(item){
       var newObject= {};
