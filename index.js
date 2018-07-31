@@ -63,19 +63,23 @@ HINT: Check each object's itemName value key to see if it matches the parameter,
 then remove it if it matches. You might find Array.prototype.splice() to be useful.
 If the cart does not contain a matching item, the function should return That item is not in
 your cart.*/
- function removeFromCart(item){
-   for(var i = 0; i < cart.length; i ++){
-     for(var list in cart[i]){
-        if(item === list){
-          cart.splice(i,1)
-
-        } else if (item !== list){
-          console.log("That item is not in your cart.")
-        }
-        return cart;
-      }
-   }
+function removeFromCart(item) {
+  var foodChecker= false;
+ for(var i = 0;i<cart.length;i++){
+   if(cart[i].hasOwnProperty(item)){
+       foodChecker=true;
+       cart.splice(i,1);
+   
+}
+}
+ 
+  if(!foodChecker){
+   console.log("That item is not in your cart.");
  }
+   
+ 
+ return cart;
+}
 
 /* The placeOrder() function accepts one argument, a credit card number.
 If no argument is received, the function should print out Sorry, we don't have a credit card on file for you..
