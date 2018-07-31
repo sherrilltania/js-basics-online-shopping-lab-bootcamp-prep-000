@@ -77,11 +77,11 @@ return Your total cost is $71, which will be charged to the card 83296759. (wher
 
  function placeOrder(cardNumber) {
  if (cardNumber === undefined){
-  console.log("We don't have a credit card on file for you to place your order.")
+  console.log("Sorry, we don't have a credit card on file for you.")
 }
 else{
-   console.log(`Your total cost is $${total()}, which will be charged to the card ${cardNumber}.`)
-  cart = []
-  return cart
+   console.log("Your total cost is $${total()}, which will be charged to the card ${cardNumber}.")
+  cart = [];
+  return cart;
 }
  }
