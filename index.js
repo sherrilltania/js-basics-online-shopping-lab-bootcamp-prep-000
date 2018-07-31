@@ -47,26 +47,30 @@ function total(){
   }
   return totalValue;
 }
-/* The removeFromCart() function accepts one argument, the name of the item that should be 
+/* The removeFromCart() function accepts one argument, the name of the item that should be
 removed.
-If the item is present in the cart, the function should remove the object from the cart and 
+If the item is present in the cart, the function should remove the object from the cart and
 then return the updated cart.
-HINT: Check each object's itemName value key to see if it matches the parameter, 
+HINT: Check each object's itemName value key to see if it matches the parameter,
 then remove it if it matches. You might find Array.prototype.splice() to be useful.
-If the cart does not contain a matching item, the function should return That item is not in 
+If the cart does not contain a matching item, the function should return That item is not in
 your cart.*/
  function removeFromCart(item){
-   for(var i = 0, l = cart.length; i < l; i++){
-   for(var list in cart[i]){
-      if(item === list){
-        cart.splice(i,1)
-        return cart
-       }
-    }
-  }
-   console.log("That item is not in your cart.")
-  return cart
-}
+   for(var i = 0; i < cart.length; i ++){
+     for(var list in cart[i]){
+        if(item === list){
+          cart.splice(i,1)
+          
+        } else if (item !=== list){
+          console.log("That item is not in your cart.")
+        }
+        return cart;
+      }
+   }
+ }
+
+   
+  
  function placeOrder(cardNumber) {
  if (cardNumber === undefined){
   console.log("We don't have a credit card on file for you to place your order.")
