@@ -19,12 +19,17 @@ return cart
  }
 
  function viewCart (){
+   var newCart = []
    for(var i = 0; i < cart.length; i ++){
-     console.log("In your cart, you have ${cart.length[i][item]} at ${cart.length[i][price]}")
+     newCart.push("${cart[i][item]} at $${cart[i][price]}")
+     console.log("In your cart, you have " + newCart.join(", ") + ".")
+   }
+   if (cart.length === 0){
+     console.log("Your shopping cart is empty.")
    }
 
  }
- 
+
  function removeFromCart(item){
    for(var i = 0, l = cart.length; i < l; i++){
    for(var list in cart[i]){
