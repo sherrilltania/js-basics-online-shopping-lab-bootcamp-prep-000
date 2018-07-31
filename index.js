@@ -19,7 +19,7 @@ return cart
  }
 
  function viewCart (){
-   var newCart = []
+   var newCart = [];
    for(var i = 0; i < cart.length; i ++){
      newCart.push("${cart[i][item]} at $${cart[i][price]}")
      if(cart.length === 1){
@@ -36,7 +36,7 @@ return cart
      console.log("Your shopping cart is empty.")
    }
  }
-   return newCart
+   return newCart;
 
  }
 
