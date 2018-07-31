@@ -69,7 +69,11 @@ your cart.*/
    }
  }
 
-
+/* The placeOrder() function accepts one argument, a credit card number.
+If no argument is received, the function should print out Sorry, we don't have a credit card on file for you..
+If a card number is received, the function should
+empty the cart array
+return Your total cost is $71, which will be charged to the card 83296759. (where 71 is the value returned by total() and 83296759 is the credit card number passed to placeOrder())*/
 
  function placeOrder(cardNumber) {
  if (cardNumber === undefined){
