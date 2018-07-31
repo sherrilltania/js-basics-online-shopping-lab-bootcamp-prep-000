@@ -61,7 +61,7 @@ your cart.*/
         if(item === list){
           cart.splice(i,1)
 
-        } else if (item !=== list){
+        } else if (item !== list){
           console.log("That item is not in your cart.")
         }
         return cart;
