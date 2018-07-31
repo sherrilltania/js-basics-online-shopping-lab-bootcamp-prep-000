@@ -22,7 +22,7 @@ function addToCart(item){
     function viewCart() {
      var sentence_starter = "In your cart, you have";
      var cart_list = [];
-     
+
     cart.forEach(function(item) {
        for(var key in item){
            cart_list.push(`${key} at $${item[key]}`)
@@ -41,7 +41,7 @@ function addToCart(item){
             cart_list[cart_list.length-1]= "and "+cart_list[cart_list.length-1];
             console.log(`${sentence_starter} ${cart_list.join(", ")}.`);
           }
-       
+
    }
 /* The total() function accepts no arguments, iterates through the cart array,
 and returns the current total value of the items in the cart.*/
