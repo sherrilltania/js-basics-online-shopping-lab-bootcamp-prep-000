@@ -19,26 +19,30 @@ function addToCart(item){
 
     }
 
- function viewCart (){
-   var newCart = [];
-   for(var i = 0; i < cart.length; i ++){
-     newCart.push("${cart[i][item]} at $${cart[i][price]}")
-     if(cart.length === 1){
-     console.log("In your cart, you have " + newCart + ".")
+    function viewCart() {
+     var sentence_starter = "In your cart, you have";
+     var cart_list = [];
+     
+    cart.forEach(function(item) {
+       for(var key in item){
+           cart_list.push(`${key} at $${item[key]}`)
+       }
+    });
+          if(cart_list.length===0){
+            console.log("Your shopping cart is empty.")
+          }
+         else if(cart_list.length == 1){
+         console.log(`${sentence_starter} ${cart_list}.`);
+          }
+          else if(cart_list.length ==2){
+            console.log(`${sentence_starter} ${cart_list[0]} and ${cart_list[1]}.`);
+          }
+          else if(cart_list.length>=3){
+            cart_list[cart_list.length-1]= "and "+cart_list[cart_list.length-1];
+            console.log(`${sentence_starter} ${cart_list.join(", ")}.`);
+          }
+       
    }
-
-   else if(cart.length === 2){
-     console.log("In your cart, you have" + newCart.join("and ") + ".")
-   }
-   else if(cart.length > 2){
-     console.log("In your cart, you have" + newCart.slice(0, -1).join(", ") + ", and " + newCart.slice(-1))
-   }
-   else if (cart.length === 0){
-     console.log("Your shopping cart is empty.")
-   }
- }
-   return newCart;
-}
 /* The total() function accepts no arguments, iterates through the cart array,
 and returns the current total value of the items in the cart.*/
 function total(){
