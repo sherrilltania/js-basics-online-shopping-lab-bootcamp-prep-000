@@ -60,7 +60,7 @@ your cart.*/
      for(var list in cart[i]){
         if(item === list){
           cart.splice(i,1)
-          
+
         } else if (item !=== list){
           console.log("That item is not in your cart.")
         }
@@ -69,8 +69,8 @@ your cart.*/
    }
  }
 
-   
-  
+
+
  function placeOrder(cardNumber) {
  if (cardNumber === undefined){
   console.log("We don't have a credit card on file for you to place your order.")
