@@ -37,8 +37,7 @@ return cart
    }
  }
    return newCart;
-
- }
+}
 
  function removeFromCart(item){
    for(var i = 0, l = cart.length; i < l; i++){
