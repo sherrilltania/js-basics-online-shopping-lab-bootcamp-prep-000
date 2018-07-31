@@ -19,25 +19,12 @@ return cart
  }
 
  function viewCart (){
-if(cart.length === 0){
-  console.log(`Your shopping cart is empty.`)
-}
-else{
-      var myString = "In your cart, you have "
-         for(var i = 0, l = cart.length; i < l; i++){
-            for(var list in cart[i]){
-            myString+=`${list} at $${cart[i][list]}`
-                if(i!==cart.length-1){
-                  myString+=", "
-                }
-                else{
-                  myString+="."
-                }
-              }
-             }
-       console.log(myString)
-  }
+   for(var i = 0; i < cart.length; i ++){
+     console.log("In your cart, you have ${cart.length[i][item]} at ${cart.length[i][price]}")
+   }
+
  }
+ 
  function removeFromCart(item){
    for(var i = 0, l = cart.length; i < l; i++){
    for(var list in cart[i]){
