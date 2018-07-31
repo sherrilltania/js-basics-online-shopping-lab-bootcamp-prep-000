@@ -45,12 +45,15 @@ function addToCart(item){
    }
 /* The total() function accepts no arguments, iterates through the cart array,
 and returns the current total value of the items in the cart.*/
-function total(){
-  var totalValue = 0;
-  for( var i = 0; i < cart.length; i ++){
-    totalValue = totalValue + cart[i].price;
-  }
-  return totalValue;
+function total() {
+  var total = 0;
+  cart.forEach(function(item){
+    for(var key in item){
+      total+=item[key];
+      console.log(total);
+    }
+  });
+  return total;
 }
 /* The removeFromCart() function accepts one argument, the name of the item that should be
 removed.
