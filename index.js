@@ -22,11 +22,20 @@ return cart
    var newCart = []
    for(var i = 0; i < cart.length; i ++){
      newCart.push("${cart[i][item]} at $${cart[i][price]}")
-     console.log("In your cart, you have " + newCart.join(", ") + ".")
+     if(cart.length === 1){
+     console.log("In your cart, you have " + newCart + ".")
    }
-   if (cart.length === 0){
+   }
+   else if(cart.length === 2){
+     console.log("In your cart, you have" + newCart.join("and ") + ".")
+   }
+   else if(cart.length > 2){
+     console.log("In your cart, you have" + newCart.slice(0, -1).join(", ") + ", and " + newCart.slice(-1)
+   }
+   else if (cart.length === 0){
      console.log("Your shopping cart is empty.")
    }
+   return newCart
 
  }
 
