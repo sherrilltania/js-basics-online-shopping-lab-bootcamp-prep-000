@@ -30,7 +30,7 @@ return cart
      console.log("In your cart, you have" + newCart.join("and ") + ".")
    }
    else if(cart.length > 2){
-     console.log("In your cart, you have" + newCart.slice(0, -1).join(", ") + ", and " + newCart.slice(-1)
+     console.log("In your cart, you have" + newCart.slice(0, -1).join(", ") + ", and " + newCart.slice(-1))
    }
    else if (cart.length === 0){
      console.log("Your shopping cart is empty.")
