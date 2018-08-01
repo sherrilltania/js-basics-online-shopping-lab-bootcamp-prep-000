@@ -12,11 +12,11 @@ function setCart(c) {
 function addToCart(item){
       var newObject= {};
         newObject[item]=Math.floor(Math.random()*100);
-      
+
      cart.push(newObject)
       console.log(`${item} has been added to your cart.`);
       return cart;
-    
+
     }
 
 
