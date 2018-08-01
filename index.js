@@ -29,7 +29,7 @@ function addToCart(item){
            cart_list.push(`${key} at $${item[key]}`)
        }
     });
-          if(cart_list.length==0){
+          if(cart_list.length===0){
             console.log("Your shopping cart is empty.")
           }
          else if(cart_list.length == 1){
